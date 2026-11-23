@@ -1,0 +1,433 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0D0918;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background: #171025;
+    border-bottom: 1px solid #38264F;
+
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar h1 {
+    color: #C99AFF;
+    font-size: 27px;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.navbar nav a {
+    color: #D8CBE8;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar nav a:hover {
+    color: #C084FC;
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    margin: 35px 5%;
+    min-height: 300px;
+    padding: 55px 40px;
+
+    display: flex;
+    align-items: center;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(24, 12, 43, 0.96),
+            rgba(74, 35, 112, 0.65)
+        ),
+        url("images/banner.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.welcome {
+    color: #D8A9FF;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.hero h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #FFFFFF;
+}
+
+.hero-content p {
+    color: #E1D5EF;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 22px;
+    padding: 12px 26px;
+
+    background: #9333EA;
+    color: white;
+
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #B66AFF;
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   MOVIE SECTIONS
+========================= */
+
+.movie-section {
+    margin: 45px 5%;
+    scroll-margin-top: 100px;
+}
+
+.movie-section h2 {
+    font-size: 26px;
+    margin-bottom: 22px;
+    padding-left: 15px;
+
+    border-left: 5px solid #A855F7;
+}
+
+
+/* GL SECTION */
+
+#gl h2 {
+    border-color: #EC4899;
+}
+
+/* BL SECTION */
+
+#bl h2 {
+    border-color: #60A5FA;
+}
+
+/* NORMAL SERIES */
+
+#normal h2 {
+    border-color: #A78BFA;
+}
+
+
+/* =========================
+   HORIZONTAL MOVIE ROW
+========================= */
+
+.movie-row {
+    display: flex;
+    gap: 20px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    padding: 10px 5px 25px;
+
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+/* SCROLLBAR */
+
+.movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-track {
+    background: #241936;
+    border-radius: 10px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background: #7542A5;
+    border-radius: 10px;
+}
+
+.movie-row::-webkit-scrollbar-thumb:hover {
+    background: #C084FC;
+}
+
+
+/* =========================
+   MOVIE CARDS
+========================= */
+
+.movie-card {
+    flex: 0 0 190px;
+    min-width: 190px;
+
+    background: #191329;
+    border: 1px solid #39284F;
+
+    border-radius: 13px;
+    overflow: hidden;
+
+    scroll-snap-align: start;
+
+    transition: transform 0.3s, box-shadow 0.3s,
+                border-color 0.3s;
+}
+
+.movie-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #B66AFF;
+
+    box-shadow:
+        0 8px 25px rgba(168, 85, 247, 0.25);
+}
+
+
+/* =========================
+   POSTER IMAGES
+========================= */
+
+.movie-card img {
+    display: block;
+
+    width: 100%;
+    height: 270px;
+
+    object-fit: cover;
+
+    background: #29203D;
+}
+
+
+/* =========================
+   MOVIE INFORMATION
+========================= */
+
+.movie-info {
+    padding: 14px;
+}
+
+.movie-info h3 {
+    font-size: 17px;
+    color: #FFFFFF;
+
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.movie-info p {
+    font-size: 13px;
+    color: #CFC3DE;
+
+    margin-bottom: 9px;
+    overflow-wrap: break-word;
+}
+
+.movie-info b {
+    color: #E4C9FF;
+}
+
+
+/* =========================
+   READ SUMMARY
+========================= */
+
+.movie-info details {
+    margin: 12px 0;
+
+    color: #D6C7E8;
+    font-size: 13px;
+}
+
+.movie-info summary {
+    cursor: pointer;
+
+    color: #D8A9FF;
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+.movie-info details p {
+    line-height: 1.7;
+}
+
+
+/* =========================
+   TRAILER BUTTON
+========================= */
+
+.trailer-btn {
+    display: inline-block;
+
+    margin-top: 8px;
+    margin-right: 4px;
+
+    padding: 9px 12px;
+
+    background: #392650;
+    color: #FFFFFF;
+
+    text-decoration: none;
+    border-radius: 6px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.trailer-btn:hover {
+    background: #9333EA;
+    color: #FFFFFF;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    margin-top: 60px;
+    padding: 30px;
+
+    background: #171025;
+    border-top: 1px solid #39284F;
+
+    text-align: center;
+    color: #D8CBE8;
+}
+
+footer h3 {
+    color: #C99AFF;
+    margin-bottom: 8px;
+}
+
+footer .copyright {
+    margin-top: 12px;
+    font-size: 12px;
+    color: #9384A5;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 35px 25px;
+        min-height: 240px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .movie-section {
+        margin: 35px 4%;
+    }
+
+    .movie-card {
+        flex-basis: 165px;
+        min-width: 165px;
+    }
+
+    .movie-card img {
+        height: 235px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar h1 {
+        font-size: 23px;
+    }
+
+    .navbar nav {
+        gap: 10px;
+        font-size: 12px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .movie-section h2 {
+        font-size: 21px;
+    }
+
+    .movie-card {
+        flex-basis: 150px;
+        min-width: 150px;
+    }
+
+    .movie-card img {
+        height: 210px;
+    }
+
+}
